@@ -258,7 +258,10 @@ void RM_MOTOR_Angle_Integral(MOTOR_REAL_INFO* RM_MOTOR)
 	}	
 	
 	//计算角度变化
-	if (RM_MOTOR->RPM >= 0)
+	if(RM_MOTOR->RPM == 0)
+		Delta_Pos = 0;
+	
+	if (RM_MOTOR->RPM > 0)
 	{
 		/* code */
 		if(RM_MOTOR->ANGLE < RM_MOTOR->LAST_ANGLE)

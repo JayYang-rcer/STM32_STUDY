@@ -232,7 +232,8 @@ void M3508_Send_Currents(void)
 */
 void RM_MOTOR_Angle_Integral(MOTOR_REAL_INFO* RM_MOTOR)
 {
-	static float Delta_Pos = 0;
+	// static float Delta_Pos = 0;
+	float Dalta_Pos = 0;
 	float Deceleration_P = 0;
 
 	//记录第一次进入时的数据
